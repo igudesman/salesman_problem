@@ -12,6 +12,7 @@ def plot_optimization_run(logs: list[LogEntry]):
     )
     plt.xlabel('Iteration')
     plt.ylabel('Distance')
+    plt.title('SA optimization process')
     plt.show()
 
 

@@ -24,7 +24,7 @@ class City:
         ).km * self.reduction_ratio
 
 
-def get_most_populated_cities(n: int = 30, file_name: str = 'city.csv') -> list[City]:
+def get_most_populated_cities(n: int = 30, file_name: str = 'data/city.csv') -> list[City]:
     most_populated_cities: list[str] = []
     with open(file_name, 'r') as file:
         cities = csv.reader(file)
