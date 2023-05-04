@@ -55,8 +55,8 @@ class TravelingPath:
     @property
     def distance(self) -> float:
         distance: float = 0.0
-        for i in range(1, len(self.cities)):
-            distance += self.cities[i].distance_to(self.cities[i-1])
+        for i in range(1, len(self.cities) + 1):
+            distance += self.cities[i % len(self.cities)].distance_to(self.cities[i-1])
         return distance
 
     def swap(self, idx: tuple[int, int]) -> 'TravelingPath':
